@@ -260,7 +260,7 @@ function bldF(){
   for(var fi=0;fi<fk.length;fi++){
     var k=fk[fi][0],label=fk[fi][1];
     var vals=k==='m'?Object.keys(uv[k]).map(Number).sort(function(a,b){return a-b;}):Object.keys(uv[k]).sort();
-    if(vals.length<2&&k!=='m')continue;
+    if(vals.length<2&&k!=='m'&&k!=='cli')continue;
     var gr=document.createElement('div');gr.className='fgrp';gr.setAttribute('data-fk',k);
     var hdr=document.createElement('div');hdr.className='fl';
     var lbl=document.createTextNode(label);hdr.appendChild(lbl);
